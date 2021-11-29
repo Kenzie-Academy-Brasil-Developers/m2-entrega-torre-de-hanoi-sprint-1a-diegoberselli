@@ -1,0 +1,32 @@
+.tower {
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+.towers {
+    display: flex;
+    margin-top: 150px;
+    margin-left: 250px;
+}
+
+#tower1 {
+    background-color: black;
+    width: 15px;
+    height: 250px;
+}
+
+#tower2 {
+    background-color: black;
+    width: 15px;
+    height: 250px;
+    height: 250px;
+    margin: 0 300px;
+}
+
+#tower3 {
+    background-color: black;
+    width: 15px;
+    height: 250px;
+}
