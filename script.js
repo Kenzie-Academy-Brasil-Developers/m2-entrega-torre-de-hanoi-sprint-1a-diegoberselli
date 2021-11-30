@@ -1,3 +1,4 @@
+
 const firstTower = document.getElementById("tower1")
 const secondTower = document.getElementById("tower2")
 const thirdTower = document.getElementById("tower3")
@@ -21,3 +22,24 @@ function start(){
     firstTower.appendChild(thirdDisc)
 }
 start()
+
+
+
+let tower1 = document.getElementById('tower1');
+tower1.addEventListener("click", mover)
+let tower2 = document.getElementById('tower2');
+tower2.addEventListener("click", mover)
+let tower3 = document.getElementById('tower3');
+tower3.addEventListener("click", mover)
+
+
+
+function mover(event){
+
+    const disc = event.target
+    if(disc3.id === "disc3"){
+        
+        console.log(disc3)
+    }
+}
+
