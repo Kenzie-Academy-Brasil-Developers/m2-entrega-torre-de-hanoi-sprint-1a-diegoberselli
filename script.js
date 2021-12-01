@@ -49,8 +49,14 @@ function selectDisc(event){
 
     if(lastDisc == null){
          lastDisc = towerClicked.lastElementChild
-    }else{
+         lastDisc == !null
+    }else if(!towerClicked.lastElementChild){
         changeTower(lastDisc, towerClicked)
+    }else if(lastDisc.clientWidth < towerClicked.lastElementChild.clientWidth){
+        changeTower(lastDisc, towerClicked)
+    }if(thirdTower.childElementCount == 3){
+        const win = document.querySelector(".winGame")
+            win.classList.add("showWinGame")
     }
 }
 
@@ -58,6 +64,13 @@ function selectDisc(event){
 function changeTower(discos, torres){
 
     torres.appendChild(discos)
+    lastDisc = null
 }
 
 
+const resetButton = document.getElementById("reset")
+    resetButton.addEventListener("click", function(){
+        start()
+        const win =document.querySelector(".winGame")
+            win.classList.remove("showWinGame")
+    })
