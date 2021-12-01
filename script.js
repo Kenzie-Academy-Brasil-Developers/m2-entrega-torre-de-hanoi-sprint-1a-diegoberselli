@@ -32,29 +32,36 @@ allTowers.forEach(function (tower) {
 })
 
 let lastDisc
+
 function selectDisc(event) {
     const towerClicked = event.currentTarget
     if (lastDisc == null) {
         lastDisc = towerClicked.lastElementChild
+        // lastDisc == !null
 
-    }else {
-        lastDisc !== null
-    }
-    if(!towerClicked.lastElementChild){
+    } else if (!towerClicked.lastElementChild) {
         changeTower(lastDisc, towerClicked)
 
-    }
-    else if(lastDisc.clientWidth < towerClicked.lastElementChild.clientWidth){
+    } else if (lastDisc.clientWidth < towerClicked.lastElementChild.clientWidth) {
         changeTower(lastDisc, towerClicked)
     }
-   
+    if (thirdTower.childElementCount === 3){
+        
+        popup() 
+    }
+
 }
-
 
 
 function changeTower(discos, torres) {
-   
+
     torres.appendChild(discos)
     lastDisc = null
 }
+
+
+function msgGanhador() {
+    const popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
 
